@@ -1,0 +1,103 @@
+/**
+ * Author：zhoushuanglong
+ * Time：2017-12-09 18:20
+ * Description：Description
+ */
+.Main {
+    .Hero {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+
+        textarea {
+            width: 100%;
+            transition: background-color 0.5s;
+            border: 1px solid #e7e6e4;
+            padding: 1rem 1.5rem;
+            font-size: 1.8rem;
+            font-weight: 500;
+            border-radius: 0.5rem;
+            color: #000;
+            height: 5rem;
+            line-height: 3rem;
+            outline: none;
+            resize: none;
+            overflow: hidden;
+        }
+
+        @media (max-width: 700px) {
+            .randomAuxiliaryWordSection {
+                textarea {
+                    height: 8.2rem;
+                    text-align: center;
+                    line-height: 1.1;
+                }
+            }
+        }
+
+        .wordButtonSection {
+            text-align: left;
+
+            .ListAttributes-word-item {
+                user-select: none;
+                display: inline-block;
+                padding: 0.5rem 1.4rem;
+                position: relative;
+                margin: 0.5rem;
+                font-size: 1.6rem;
+                background: #f9f8f6;
+                border: 0.2rem solid #e7e6e4;
+                border-radius: 0.4rem;
+                cursor: pointer;
+
+                &.active {
+                    background-color: #ff8538;
+                    color: #f9f8f6;
+                }
+            }
+        }
+
+        .auxiliaryWordSection {
+            .InputButtons-group {
+                position: relative;
+
+                @media (max-width: 700px) {
+                    textarea {
+                        height: 7rem;
+                        text-align: center;
+                        line-height: 1.1;
+                    }
+                }
+
+                .markWords {
+                    background: #fff;
+                    border: 1px solid rgb(204, 204, 204);
+                    list-style: none;
+                    padding: 0;
+                    text-align: left;
+                    position: absolute;
+                    width: 100%;
+                    z-index: 1;
+                    bottom: 35px;
+                    display: none;
+
+                    &.active {
+                        display: block;
+                    }
+
+                    li {
+                        padding: 10px;
+                        color: #000;
+                        cursor: pointer;
+
+                        &:hover {
+                            background: #f9f8f6;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

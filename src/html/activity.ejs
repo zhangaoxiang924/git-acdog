@@ -1,0 +1,37 @@
+<%- include('./include/header', {
+title: 'CryptoDogs',
+description: 'CryptoDogs',
+keywords: 'CryptoDogs',
+plugin: [],
+private: ['../css/public.css'],
+status: 'full',
+login: false,
+page: 'activity'
+}) %>
+
+<html>
+<head></head>
+<body>
+<main class="Main">
+    <div class="Hero activity">
+        <div class="Container">
+            <h1 class="Hero-h2">交易記錄</h1>
+            <p class="Hero-description">
+                以下是您所請求交易的清單。請記住，壹旦交易進入區塊鏈，應用程序需要壹些時間才能收到更新，請稍候！
+            </p>
+            <div class="ActivityPage">
+                <div class="ActivityPage-section">
+                    <div class="Loader"><span class="Loader-img"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
+
+<%- include('./include/footer', {
+plugin: [],
+private: ['../js/public.js', '../js/activity.js'],
+statistics: ''
+}) %>

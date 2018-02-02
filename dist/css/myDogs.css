@@ -1,0 +1,105 @@
+@charset "UTF-8";
+/**
+ * Author：zhoushuanglong
+ * Time：2017-12-09 18:20
+ * Description：Description
+ */
+.Main {
+  position: relative; }
+  @media (max-width: 760px) {
+    .Main .extractCommitModal .Modal-content,
+    .Main .extractBalanceModal .Modal-content,
+    .Main .sugarModal .Modal-content {
+      width: 90%; }
+    .Main .sugar {
+      display: block;
+      margin-top: 1rem; } }
+  .Main .extractCommitModal,
+  .Main .extractBalanceModal,
+  .Main .sugarModal {
+    display: none; }
+    .Main .extractCommitModal .KittyTransferModal,
+    .Main .extractBalanceModal .KittyTransferModal,
+    .Main .sugarModal .KittyTransferModal {
+      padding: 0 2rem; }
+    .Main .extractCommitModal .KittyTransferModal-close,
+    .Main .extractBalanceModal .KittyTransferModal-close,
+    .Main .sugarModal .KittyTransferModal-close {
+      right: 0.5rem;
+      top: -2rem; }
+    .Main .extractCommitModal label,
+    .Main .extractBalanceModal label,
+    .Main .sugarModal label {
+      margin-bottom: 1.5rem;
+      display: inline-block; }
+    .Main .extractCommitModal .Section-modal,
+    .Main .extractBalanceModal .Section-modal,
+    .Main .sugarModal .Section-modal {
+      margin: 3rem 0.5rem; }
+  .Main .siteModal {
+    display: none; }
+    @media (max-width: 375px) {
+      .Main .siteModal .Modal-content {
+        width: 90%; } }
+    .Main .siteModal .KittyTransferModal-close {
+      top: -3rem;
+      right: 0; }
+    .Main .siteModal .chargeSite {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .Main .siteModal .chargeSite ul {
+        margin: 0;
+        padding: 0;
+        max-width: 50rem;
+        width: 100%; }
+        .Main .siteModal .chargeSite ul li {
+          list-style: none;
+          padding: 0.5rem 0.8rem; }
+          .Main .siteModal .chargeSite ul li a {
+            color: #82817d;
+            text-decoration: underline; }
+            .Main .siteModal .chargeSite ul li a:hover {
+              color: #000; }
+  .Main .ProfilePage .ProfileHeader .getMoney {
+    position: relative; }
+    .Main .ProfilePage .ProfileHeader .getMoney ul {
+      display: none;
+      width: 12rem;
+      position: absolute;
+      top: 1rem;
+      right: -9rem;
+      border: 1px solid #f9f8f6;
+      padding: 0;
+      text-align: center; }
+      .Main .ProfilePage .ProfileHeader .getMoney ul.active {
+        display: block; }
+      .Main .ProfilePage .ProfileHeader .getMoney ul li {
+        display: inline-block;
+        list-style: none;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        cursor: pointer; }
+        .Main .ProfilePage .ProfileHeader .getMoney ul li:nth-child(2) {
+          border-top: 1px solid #f9f8f6; }
+        .Main .ProfilePage .ProfileHeader .getMoney ul li:hover {
+          background: #ffd334;
+          color: #fff; }
+    @media (max-width: 760px) {
+      .Main .ProfilePage .ProfileHeader .getMoney ul {
+        top: -3rem;
+        right: -13rem; } }
+    @media (max-width: 500px) {
+      .Main .ProfilePage .ProfileHeader .getMoney ul {
+        top: 1rem;
+        right: -4rem; } }
+
+/*# sourceMappingURL=myDogs.css.map */
+
+/*# sourceMappingURL=myDogs.css.map */

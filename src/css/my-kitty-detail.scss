@@ -1,0 +1,26 @@
+/**
+ * Author：zhoushuanglong
+ * Time：2017-12-09 18:20
+ * Description：Description
+ */
+.giftModal {
+    .Modal-content {
+        @media (max-width: 760px) {
+            width: 90%;
+        }
+    }
+}
+
+.my-kitty-detail {
+    position: relative;
+
+    .geneDiv,
+    .parentsDiv,
+    .childrenDiv {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,152 @@
+<%- include('./include/header', {
+title: 'CryptoDogs',
+description: 'CryptoDogs',
+keywords: 'CryptoDogs',
+plugin: [],
+private: ['../css/public.css', '../css/myDogs.css'],
+status: 'full',
+page: 'mydogs'
+}) %>
+
+<main class="Main">
+    <%- include('./include/balance') %>
+    <%- include('./include/commit') %>
+    <%- include('./include/sugar') %>
+    <div class="Modal siteModal">
+        <div class="Modal-content">
+            <div class="KittyTransferModal">
+                <button class="KittyTransferModal-close"></button>
+                <div class="Container Container--center">
+                    <div class="Section">
+                        <div class="Note Note--warning">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">请选择交易所进行充值</font>
+                            </font>
+                        </div>
+                    </div>
+                    <div class="Section chargeSite">
+                        <ul>
+                            <li><a target="_blank" href="http://www.ourdax.com">Ourdax</a></li>
+                            <li><a target="_blank" href="http://www.okex.com">OkEX</a></li>
+                            <li><a target="_blank" href="http://www.kex.com">KEX</a></li>
+                            <li><a target="_blank" href="http://www.kucoin.com">Kucoin</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ProfilePage">
+        <div class="Container Container--lg">
+            <div class="ProfileHeader">
+                <div class="ProfileHeader-details">
+                    <img class="ProfileHeader-image" src="../images/icons/head.svg">
+                    <div class="ProfileHeader-info">
+                        <h1 class="ProfileHeader-title">
+                            <em></em>
+                        </h1>
+                        <div class="ProfileHeader-wallet">
+                            <a class="CopyAddress" href="./wallet-address.html">
+                                <span>
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">
+                                            地址
+                                        </font>
+                                    </font>
+                                </span>
+                            </a>
+                            <span class="logOutSpan">
+                                <span class="Separator"></span>
+                                <a class="ProfileHeader-settings" aria-current="false">
+                                    <em>註銷</em>
+                                </a>
+                            </span>
+                            <span class="site">
+                                <span class="Separator"></span>
+                                <a class="ProfileHeader-settings" aria-current="false">
+                                    <em>充值</em>
+                                </a>
+                            </span>
+                            <span class="getMoney">
+                                <span class="Separator"></span>
+                                <a class="ProfileHeader-settings" aria-current="false">
+                                    <em>提現</em>
+                                </a>
+                                <ul class="tips">
+                                    <li class="toAccount">提取合約余額</li>
+                                    <li class="toCash">提出賬戶余額</li>
+                                </ul>
+                            </span>
+                            <span class="sugar">
+                                <span class="Separator"></span>
+                                <a class="ProfileHeader-settings" aria-current="false">
+                                    <em>登记地址</em>
+                                </a>
+                            </span>
+                            <!--<span>-->
+                            <!--<span class="Separator"></span>-->
+                            <!--<a class="ProfileHeader-settings" aria-current="false" href="./email-name.html">-->
+                            <!--<font style="vertical-align: inherit;">-->
+                            <!--<font style="vertical-align: inherit;">-->
+                            <!--設置-->
+                            <!--</font>-->
+                            <!--</font>-->
+                            <!--</a>-->
+                            <!--</span>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ProfileFilterBar">
+            <div class="Filter Filter--purple">
+                <div class="Filter-container">
+                    <!--
+                    <div class="Filter-selectors">
+                        <select class="Filter-select" placeholder="Sorting order">
+                            <option value=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">年齡最小</font></font></option>
+                            <option value="old-first"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">生成最早</font></font></option>
+                            <option value="cheap"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">最便宜</font></font></option>
+                            <option value="expensive"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">最昂貴</font></font></option>
+                        </select>
+                    </div>
+                    <div class="Filter-sortBy">
+                        <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">排序方式</font></font>
+                    </div>
+                    -->
+                    <div class="Filter-tabs">
+                        <span class="Filter-tab Filter-tab--active">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">所有的狗</font>
+                            </font>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="nodogDiv">
+
+        </div>
+
+        <div class="Loader"><span class="Loader-img"></span></div>
+
+        <div class="ProfileKitties">
+            <div class="KittiesGallery">
+                <div class="Container Container--lg">
+                    <div class="KittiesGrid" id="kittiesGrid">
+
+                    </div>
+                </div>
+            </div>
+            <div class="KittiesGalleryPagination" id="pagination"></div>
+        </div>
+    </div>
+</main>
+
+
+<%- include('./include/footer', {
+plugin: [],
+private: ['../js/api.js', '../js/public.js', '../js/myKitties.js'],
+statistics: ''
+}) %>

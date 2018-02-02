@@ -1,0 +1,148 @@
+<%- include('./include/header', {
+title: 'CryptoDogs',
+description: 'CryptoDogs',
+keywords: 'CryptoDogs',
+plugin: [],
+private: ['../css/public.css', '../css/buy.css'],
+status: 'full',
+login: true,
+page: 'marketplace'
+}) %>
+
+<%- include('./include/pay') %>
+
+<main class="Main">
+    <div class="Hero buy">
+        <div class="Transaction">
+            <h1 class="Transaction-title">
+                <em></em>
+            </h1>
+            <div class="Transaction-flow">
+                <span class="Transaction-item Transaction-item--from">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">妳</font>
+                    </font>
+                </span>
+                <svg width="32" height="1" viewBox="0 0 32 1" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M.98.5h30.07" stroke="#DCDBD9" fill="none" fill-rule="evenodd" stroke-linecap="square"></path>
+                </svg>
+                <span class="Transaction-item Transaction-item--transfer">
+                    Ξ <em></em>
+                </span>
+                <svg width="29" height="13" viewBox="0 0 29 13" xmlns="http://www.w3.org/2000/svg">
+                    <g stroke="#DCDBD9" fill="none" fill-rule="evenodd">
+                        <path d="M.5 6.5h28" stroke-linecap="square"></path>
+                        <path d="M23 1l5.75 5.47L23 11.6"></path>
+                    </g>
+                </svg>
+				<span class="Transaction-item Transaction-item--to saler">
+                    <em></em>
+                </span>
+            </div>
+        </div>
+        <div class="KittyBanner u-bg-alt-strawberry">
+            <div class="Container Container--full">
+                <div class="KittyBanner-container">
+                    <a aria-current="false">
+                        <img class="KittyBanner-image" src="" alt=""></a>
+                    <div class="KittyBanner-status">
+                        <div class="KittyStatus KittyStatus--list">
+                            <div class="KittyStatus-item">
+							<span class="KittyStatus-itemIcon">
+								<i class="Icon Icon--tag"></i>
+							</span>
+                                <span class="KittyStatus-itemText">
+								<!-- react-text: 749 -->
+								<font style="vertical-align: inherit;">
+									<font style="vertical-align: inherit;">售價</font>
+									<span class="KittyStatus-note">
+										<small>
+											<font style="vertical-align: inherit;">Ξ</font>
+                                        </small>
+									</span>
+									<span class="KittyStatus-note">
+                                        <em></em>
+                                    </span>
+								</font>
+							</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="KittyBanner-share">-->
+                    <!--<img class="KittyBanner-shareBtn" src="../images/icons/share.svg" alt="分享我！" role="button">-->
+                    <!--&lt;!&ndash; react-empty: 756 &ndash;&gt;-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+        <div class="Container Container--sm Container--center">
+            <div class="Section">
+                <p class="Hero-description">
+                    <!-- react-text: 760 -->
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">點擊按鈕，妳將把</font>
+                        <strong class="strongPrice">
+                            <em></em>
+                        </strong>
+                        <strong>
+                            <font style="vertical-align: inherit;"> ACT</font>
+                        </strong>
+                        <font style="vertical-align: inherit;">轉移</font>
+                        <font style="vertical-align: inherit;">給</font>
+                        <strong class="strongSaler">
+                            <em></em>
+                        </strong>
+                        <br>
+                        小狗
+                        <strong class="strongName">
+                            <em></em>
+                        </strong>
+                        <font style="vertical-align: inherit;">將歸屬於妳。</font>
+                    </font>
+                    <!-- /react-text -->
+                    <strong>
+                        <!-- react-text: 762 -->
+                        <font style="vertical-align: inherit;"></font>
+                        <!-- /react-text -->
+                        <!-- react-text: 763 -->
+                        <font style="vertical-align: inherit;"></font>
+                        <!-- /react-text -->
+                    </strong>
+                    <!-- react-text: 764 -->
+                    <font style="vertical-align: inherit;"></font>
+                    <!-- /react-text -->
+                    <strong>
+                        <font style="vertical-align: inherit;"></font>
+                    </strong>
+                    <!-- react-text: 766 -->
+                    <font style="vertical-align: inherit;"></font>
+                    <!-- /react-text -->
+                    <strong>
+                        <font style="vertical-align: inherit;"></font>
+                    </strong>
+                    <!-- react-text: 768 -->
+                    <font style="vertical-align: inherit;"></font>
+                    <!-- /react-text -->
+                </p>
+                <div class="Section">
+                    <div class="Note Note--warning">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">註意：如果交易失敗，也將收取Gas費。</font>
+                        </font>
+                    </div>
+                    <button class="Button Button--larger Button--buy">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">好的，買這個小狗</font>
+                        </font>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<%- include('./include/footer', {
+plugin: [],
+private: ['../js/public.js', '../js/api.js', '../js/buy.js'],
+statistics: ''
+}) %>

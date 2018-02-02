@@ -1,0 +1,144 @@
+/**
+ * Author：zhoushuanglong
+ * Time：2017-12-09 18:20
+ * Description：Description
+ */
+.Main {
+    position: relative;
+
+    @media (max-width: 760px) {
+        .extractCommitModal,
+        .extractBalanceModal,
+        .sugarModal {
+            .Modal-content {
+                width: 90%;
+            }
+        }
+
+        .sugar {
+            display: block;
+            margin-top: 1rem;
+        }
+    }
+
+    .extractCommitModal,
+    .extractBalanceModal,
+    .sugarModal {
+        display: none;
+
+        .KittyTransferModal {
+            padding: 0 2rem;
+        }
+
+        .KittyTransferModal-close {
+            right: 0.5rem;
+            top: -2rem;
+        }
+
+        label {
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        .Section-modal {
+            margin: 3rem 0.5rem;
+        }
+    }
+
+    .siteModal {
+        display: none;
+
+        @media (max-width: 375px) {
+            .Modal-content {
+                width: 90%;
+            }
+        }
+
+        .KittyTransferModal-close {
+            top: -3rem;
+            right: 0;
+        }
+
+        .chargeSite {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            ul {
+                margin: 0;
+                padding: 0;
+                max-width: 50rem;
+                width: 100%;
+
+                li {
+                    //display: inline-block;
+                    list-style: none;
+                    padding: 0.5rem 0.8rem;
+
+                    a {
+                        color: #82817d;
+                        text-decoration: underline;
+
+                        &:hover {
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .ProfilePage {
+        .ProfileHeader {
+            .getMoney {
+                position: relative;
+
+                ul {
+                    display: none;
+                    width: 12rem;
+                    position: absolute;
+                    top: 1rem;
+                    right: -9rem;
+                    border: 1px solid #f9f8f6;
+                    padding: 0;
+                    text-align: center;
+
+                    &.active {
+                        display: block;
+                    }
+
+                    li {
+                        display: inline-block;
+                        list-style: none;
+                        width: 100%;
+                        padding: 0.5rem 1rem;
+                        cursor: pointer;
+
+                        &:nth-child(2) {
+                            border-top: 1px solid #f9f8f6;
+                        }
+
+                        &:hover {
+                            background: #ffd334;
+                            color: #fff;
+                        }
+                    }
+                }
+
+                @media (max-width: 760px) {
+                    ul {
+                        top: -3rem;
+                        right: -13rem;
+                    }
+                }
+
+                @media (max-width: 500px) {
+                    ul {
+                        top: 1rem;
+                        right: -4rem;
+                    }
+                }
+            }
+        }
+    }
+}

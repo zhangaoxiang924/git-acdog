@@ -1,0 +1,31 @@
+@charset "UTF-8";
+/**
+ * Author：zhoushuanglong
+ * Time：2017-12-09 18:20
+ * Description：Description
+ */
+.kitty-details .geneDiv,
+.kitty-details .parentsDiv,
+.kitty-details .childrenDiv {
+  display: none; }
+  .kitty-details .geneDiv.active,
+  .kitty-details .parentsDiv.active,
+  .kitty-details .childrenDiv.active {
+    display: block; }
+
+.kitty-details .KittyHeader-details-condition:hover .Tooltip--arrowTop {
+  display: inline-block; }
+
+.kitty-details .KittyHeader-details-condition .Tooltip--arrowTop {
+  display: none; }
+
+.kitty-details .ListAttributes-item--color:before {
+  background-image: url(../images/icons/type-common.svg); }
+
+.kitty-details .parentsDiv .KittyCard:before,
+.kitty-details .childrenDiv .KittyCard:before {
+  top: 68%; }
+
+/*# sourceMappingURL=kitty-details.css.map */
+
+/*# sourceMappingURL=kitty-details.css.map */

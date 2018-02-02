@@ -1,0 +1,119 @@
+<%- include('./include/header', {
+title: 'CryptoDogs',
+description: 'CryptoDogs',
+keywords: 'CryptoDogs',
+plugin: [],
+private: ['../css/public.css', '../css/login.css'],
+status: 'full',
+login: false,
+page: 'login'
+}) %>
+
+<main class="Main">
+    <div class="Hero login-fill-auxiliary-word active">
+        <div class="Container Container--sm Container--center">
+            <h2 class="Hero-h2">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">登陸</font>
+                </font>
+            </h2>
+            <form>
+                <div class="Section">
+                    <img class="ProfileHeader-image ProfileHeader-image--clickable" src="../images/icons/logo.svg">
+                </div>
+                <div class="Section">
+                    <div class="InputButtons-group">
+                        <label for="address">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">助記詞</font>
+                            </font>
+                        </label>
+                        <input type="text" class="InputButtons InputButtons-input" placeholder="請填寫助記詞" value="" maxlength="100">
+                        <ul class="markWords"></ul>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="Hero login-by-privateKey">
+        <div class="Container Container--sm Container--center">
+            <h2 class="Hero-h2">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">登陸</font>
+                </font>
+            </h2>
+            <form>
+                <div class="Section">
+                    <img class="ProfileHeader-image ProfileHeader-image--clickable" src="../images/icons/logo.svg">
+                </div>
+                <div class="Section">
+                    <div class="InputButtons-group">
+                        <label for="privateKey">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">私鑰</font>
+                            </font>
+                        </label>
+                        <input type="text" class="InputButtons InputButtons-input privateKey" placeholder="請填寫私鑰" value="" maxlength="100">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="Hero login-transaction-password active">
+        <div class="Container Container--sm Container--center">
+            <form>
+                <div class="Section">
+                    <p class="InputButtons-group">
+                        <label for="address">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">
+                                    交易密碼
+                                </font>
+                            </font>
+                        </label>
+                        <input type="password" class="InputButtons InputButtons-input passport" placeholder="請填寫交易密碼" maxlength="100">
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!--<div class="Section Container&#45;&#45;center">-->
+        <!--<span class="loginMethod pkLoginButton active">-->
+            <!--<font style="vertical-align: inherit;">-->
+                <!--<font style="vertical-align: inherit;">-->
+                    <!--私鑰登陸 >>-->
+                <!--</font>-->
+            <!--</font>-->
+        <!--</span>-->
+        <!--<span class="loginMethod mLoginButton">-->
+            <!--<font style="vertical-align: inherit;">-->
+                <!--<font style="vertical-align: inherit;">-->
+                    <!--助記詞登陸 >>-->
+                <!--</font>-->
+            <!--</font>-->
+        <!--</span>-->
+    <!--</div>-->
+    <div class="Section Container--center">
+        <a class="Button Button--larger" href="../html/auxiliary-word.html">
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">
+                    註冊
+                </font>
+            </font>
+        </a>
+        <a class="Button Button--love Button--larger nextStep">
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">
+                    登陸
+                </font>
+            </font>
+        </a>
+    </div>
+</main>
+
+
+<%- include('./include/footer', {
+plugin: [],
+private: ['../js/public.js', '../js/api.js', '../js/login.js'],
+statistics: ''
+}) %>

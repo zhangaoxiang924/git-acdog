@@ -1,0 +1,50 @@
+/**
+ * Author：zhoushuanglong
+ * Time：2017-12-23 14:45
+ * Description：Description
+ */
+
+body {
+    overflow-x: hidden;
+}
+
+.Landing-description {
+    background: url("../images/merry/merry-banner-bg-small.jpg") no-repeat bottom center;
+    background-size: contain;
+}
+
+.merry-tree {
+    position: absolute;
+    bottom: -70/16 + rem;
+    right: 0;
+    height: 200/16 + rem;
+    width: 135/16 + rem;
+
+    img {
+        width: 100%;
+    }
+}
+
+.Explainer-wrap {
+    background: url("../images/merry/merry-four-bg-small.jpg") no-repeat top;
+    background-size: 100% auto;
+}
+
+@media (min-width: 760px) {
+    .Landing-description {
+        background: url("../images/merry/merry-banner-bg.jpg") no-repeat center;
+        background-size: cover;
+    }
+
+    .Explainer-wrap {
+        background: url("../images/merry/merry-four-bg.jpg") no-repeat top;
+        background-size: contain;
+    }
+
+    .merry-tree {
+        bottom: -80/16 + rem;
+        right: -80/16 + rem;
+        height: 320/16 + rem;
+        width: 255/16 + rem;
+    }
+}

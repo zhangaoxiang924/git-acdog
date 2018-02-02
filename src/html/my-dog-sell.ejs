@@ -1,0 +1,138 @@
+<%- include('./include/header', {
+title: 'CryptoDogs',
+description: 'CryptoDogs',
+keywords: 'CryptoDogs',
+plugin: [],
+private: ['../css/public.css'],
+status: 'full',
+login: true,
+page: 'mydogs'
+}) %>
+
+<%- include('./include/pay') %>
+
+<main class="Main">
+    <div class="KittyPage my-kitty-sell">
+        <div class="KittyBanner u-bg-alt-strawberry">
+            <div class="Container Container--full">
+                <div class="KittyBanner-container">
+                    <a aria-current="false"></a>
+                    <div class="KittyBanner-status">
+                        <!-- react-empty: 244 -->
+                    </div>
+                    <!--<div class="KittyBanner-share">-->
+                    <!--<img class="KittyBanner-shareBtn" src="../images/icons/share.svg" alt="分享我！" role="button">-->
+                    <!--&lt;!&ndash; react-empty: 247 &ndash;&gt;-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+        <div class="KittyPage-content">
+            <div class="KittySell">
+                <div class="Container Container--sm">
+                    <div class="KittyAuction">
+                        <h2 class="KittyAuction-title">
+                            <i class="Icon Icon--tag">
+                            </i>
+                            <em>賣小狗</em>
+                        </h2>
+                        <div class="KittyAuction-description">
+                            <p>
+                                <strong>
+                                    <em></em>
+                                </strong>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">
+                                        將被投放市場供他人觀看和購買。
+                                    </font>
+                                    <font style="vertical-align: inherit;">
+                                        起拍價將會下降，直到拍賣結束。
+                                    </font>
+                                    <font style="vertical-align: inherit;">
+                                        如果沒有人買妳的小狗，他們會回到妳的家中。
+                                    </font>
+                                </font>
+                            </p>
+                        </div>
+                        <form class="AuctionForm">
+                            <label class="AuctionForm-row" for="field-startPrice">
+                                <span class="AuctionForm-title">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">
+                                            輸入起始價格
+                                        </font>
+                                    </font>
+                                </span>
+                                <span class="AuctionForm-unit">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">
+                                            Ξ
+                                        </font>
+                                    </font>
+                                </span>
+                                <input type="number" step="0.001" min="0.002" max="100000000" class="AuctionForm-value" value="0" id="input-startPrice">
+                            </label>
+                            <label class="AuctionForm-row" for="field-endPrice">
+                                <span class="AuctionForm-title">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">
+                                            輸入結束價格
+                                        </font>
+                                    </font>
+                                </span>
+                                <span class="AuctionForm-unit">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">
+                                            Ξ
+                                        </font>
+                                    </font>
+							    </span>
+                                <input type="number" step="0.001" max="99999999" min="0.001" class="AuctionForm-value" value="0" id="input-endPrice">
+                            </label>
+                            <label class="AuctionForm-row" for="field-duration">
+                                <span class="AuctionForm-title">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">
+                                            持續
+                                        </font>
+                                    </font>
+                                </span>
+                                <span class="AuctionForm-unit">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">
+                                            天
+                                        </font>
+                                    </font>
+                                </span>
+                                <!--<input type="number" step="0.001" min="0.001" class="AuctionForm-value" value="0.5" id="input-duration">-->
+                                <input type="number" step="0.5" min="0.5" class="AuctionForm-value" value="0.5" id="input-duration">
+                            </label>
+                            <div class="AuctionForm-row AuctionForm-row--submit">
+                                <button class="Button Button--larger AuctionForm-button" type="submit">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">
+                                            完成
+                                        </font>
+                                    </font>
+                                </button>
+                            </div>
+                            <div class="Note Note--warning">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">
+                                        警告：如果网站給妳壹個警告（例如“Gas limit is dangerously high”），點擊拒絕，刷新頁面，然後重試。
+                                    </font>
+                                </font>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<%- include('./include/footer', {
+plugin: [],
+private: ['../js/api.js', '../js/public.js', '../js/my-kitty-sell.js'],
+statistics: ''
+}) %>

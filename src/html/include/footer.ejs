@@ -1,0 +1,129 @@
+<footer class="Footer">
+    <div class="Container Container--lg">
+        <div class="Footer-primary">
+            <div class="Footer-nav Footer-nav--primary">
+                <ul class="Footer-nav-items">
+                    <li class="Footer-nav-item">
+                        <a class="Footer-nav-link Footer-nav-link--mykitties" aria-current="false" href="../html/my-dogs.html">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">我的小狗</font>
+                            </font>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Footer-nav Footer-nav--primary">
+                <ul class="Footer-nav-items">
+                    <li class="Footer-nav-item">
+                        <a class="Footer-nav-link Footer-nav-link--activity" aria-current="false" href="../html/activity.html">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">交易記錄</font>
+                            </font>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Footer-nav Footer-nav--primary">
+                <ul class="Footer-nav-items">
+                    <li class="Footer-nav-item">
+                        <a class="Footer-nav-link Footer-nav-link--marketplace" aria-current="false" href="../html/marketplace.html">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">市場</font>
+                            </font>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Footer-nav Footer-nav--primary">
+                <ul class="Footer-nav-items">
+                    <li class="Footer-nav-item">
+                        <a class="Footer-nav-link Footer-nav-link--faq" aria-current="false" href="../html/faq.html">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">常見問題解答</font>
+                            </font>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Footer-nav Footer-nav--primary">
+                <ul class="Footer-nav-items">
+                    <li class="Footer-nav-item">
+                        <a class="Footer-nav-link Footer-nav-link--help" aria-current="false" href="../html/faq.html">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">幫助支持</font>
+                            </font>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Footer-nav Footer-nav--primary">
+                <ul class="Footer-nav-items">
+                    <li class="Footer-nav-item">
+                        <a class="Footer-nav-link Footer-nav-link--help" aria-current="false" target="_blank" href="https://jq.qq.com/?_wv=1027&k=5xwZw4f">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">官方QQ群</font>
+                            </font>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Footer-nav Footer-nav--primary">
+                <ul class="Footer-nav-items">
+                    <li class="Footer-nav-item">
+                        <a class="Footer-nav-link Footer-nav-link--help" aria-current="false" href="mailto:support@acdog.hk">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">官方邮箱</font>
+                            </font>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--<div class="Footer-nav Footer-nav&#45;&#45;primary">-->
+                <!--<ul class="Footer-nav-items">-->
+                    <!--<li class="Footer-nav-item">-->
+                        <!--<a class="Footer-nav-link Footer-nav-link&#45;&#45;help" aria-current="false" href="http://47.52.198.203/en/acdog/html">-->
+                            <!--<font style="vertical-align: inherit;">-->
+                                <!--<font style="vertical-align: inherit;">EN/CN</font>-->
+                            <!--</font>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        </div>
+        <!--<div class="Footer-secondary">-->
+        <!--<a class="Footer-secondary-link" aria-current="false" href="../html/faq.html">-->
+        <!--<font style="vertical-align: inherit;">-->
+        <!--<font style="vertical-align: inherit;">使用條款</font>-->
+        <!--</font>-->
+        <!--</a>-->
+        <!--<a class="Footer-secondary-link" aria-current="false" href="../html/faq.html">-->
+        <!--<font style="vertical-align: inherit;">-->
+        <!--<font style="vertical-align: inherit;">隱私政策</font>-->
+        <!--</font>-->
+        <!--</a>-->
+        <!--</div>-->
+    </div>
+</footer>
+
+<!-- public -->
+<script src="../js/jquery-1.12.0.min.js"></script>
+<script src="../js/jquery.cookie.js"></script>
+
+<!-- plugin -->
+<% for (var i = 0 in plugin) { %>
+<script src="<%= plugin[i] %>"></script>
+<% } %>
+
+<!-- private -->
+<script src="../js/vendors.js"></script>
+<% for (var i = 0 in private) { %>
+<script src="<%= private[i] %>"></script>
+<% } %>
+
+<!-- statistics -->
+<div class="website-statistics">
+    <script src="<%= statistics %>" language="JavaScript"></script>
+</div>
+
+</body>
+</html>

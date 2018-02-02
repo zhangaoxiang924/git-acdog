@@ -1,0 +1,70 @@
+<%- include('./include/header', {
+title: 'CryptoDogs',
+description: 'CryptoDogs',
+keywords: 'CryptoDogs',
+plugin: [],
+private: ['../css/public.css'],
+status: 'full',
+login: false,
+page: 'auxiliary-word'
+}) %>
+
+<main class="Main">
+    <div class="Hero email-name">
+        <div class="Container Container--sm Container--center">
+            <h2 class="Hero-h2">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">綁定郵箱與昵稱</font>
+                </font>
+            </h2>
+            <form>
+                <div class="Section">
+                    <img class="ProfileHeader-image ProfileHeader-image--clickable" src="../images/icons/head.svg">
+                </div>
+                <div class="Section">
+                    <p class="InputButtons-group">
+                        <label for="address">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">郵箱</font>
+                            </font>
+                        </label>
+                        <input type="email" class="InputButtons InputButtons-input" placeholder="請填寫郵箱" value="" maxlength="100">
+                    </p>
+                </div>
+                <div class="Section">
+                    <p class="InputButtons-group">
+                        <label for="address">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">昵稱</font>
+                            </font>
+                        </label>
+                        <input type="text" class="InputButtons InputButtons-input" placeholder="請輸入昵稱" value="" maxlength="100">
+                    </p>
+                </div>
+                <div class="Section">
+                    <div class="Note Note--warning">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">請填寫昵稱與郵箱</font>
+                        </font>
+                    </div>
+                    <a class="Button Button--love Button--larger finish">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">完成</font>
+                        </font>
+                    </a>
+                    <!--<a class="Button Button&#45;&#45;love Button&#45;&#45;larger skip">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">跳過</font>
+                        </font>
+                    </a>-->
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+<%- include('./include/footer', {
+plugin: [],
+private: ['../js/public.js', '../js/email-name.js'],
+statistics: ''
+}) %>

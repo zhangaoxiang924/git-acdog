@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="CryptoDogs">
+    <meta name="description" content="CryptoDogs">
+    <meta name="author" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport"
+          content="
+          width=device-width,
+          initial-scale=1.0,
+          minimum-scale=1.0,
+          maximum-scale=1.0,
+          user-scalable=no"/>
+    <link rel='icon' href='../images/favicon.ico' type='image/x-ico'>
+    <title>CryptoDogs</title>
+
+    <!--[if lt IE 9]>
+    <script src="../js/browser-tips.js"></script>
+    <script src="../js/css3-mediaqueries.js"></script>
+    <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <!-- plugin -->
+    
+
+    <!-- private -->
+    
+    <link href="../css/public.css" rel="stylesheet">
+    
+    <link href="../css/my-kitty-detail.css" rel="stylesheet">
+    
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?8f2fb0c218a01c32228cb20319ecd9f0";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+<body>
+
+
+    <div class="Container Container--full">
+        
+        <div class="Header">
+            <a class="Header-home active" aria-current="true" href="../html/index.html">
+                <div class="Header-logoWrapper">
+                    <div class="Header-logo"></div>
+                </div>
+                <h1 class="Header-wordmark">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">CryptoDogs</font>
+                    </font>
+                </h1>
+            </a>
+
+            <nav class="Header-navigation hasLogin">
+                <span class="cut-line"></span>
+                <a class="Header-navigation-item Header-navigation-item--active"
+                   aria-current="true" href="../html/my-dogs.html">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">我的小狗</font>
+                    </font>
+                </a>
+                <span class="cut-line"></span>
+                <a class="Header-navigation-item  " aria-current="false" href="../html/marketplace.html">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">市場</font>
+                    </font>
+                </a>
+                <span class="cut-line"></span>
+                <!--<a class="Header-navigation-item" aria-current="false" href="/invite">
+                    <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">邀請</font></font>
+                </a>-->
+                <a class="Header-navigation-item Header-navigation-item--bell " aria-current="false" href="../html/activity.html">
+                    <img src="../images/icons/activity.svg">
+                </a>
+                <span class="cut-line"></span>
+                <a class="Header-navigation-item " aria-current="false" href="../html/notice.html">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">公告</font>
+                    </font>
+                </a>
+                <span class="cut-line"></span>
+            </nav>
+            <nav class="Header-navigation notLogin">
+                <span class="cut-line"></span>
+                <a class="Header-navigation-item " aria-current="true"
+                   href="../html/login.html">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">登陸</font>
+                    </font>
+                </a>
+                <span class="cut-line"></span>
+                <a class="Header-navigation-item " aria-current="true"
+                   href="../html/auxiliary-word.html">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">註冊</font>
+                    </font>
+                </a>
+                <span class="cut-line"></span>
+                <a class="Header-navigation-item " aria-current="false" href="../html/marketplace.html">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">市場</font>
+                    </font>
+                </a>
+                <span class="cut-line"></span>
+                <a class="Header-navigation-item " aria-current="false" href="../html/notice.html">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">公告</font>
+                    </font>
+                </a>
+                <span class="cut-line"></span>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="Modal giftModal" style="display: none">
+    <div class="Modal-content">
+        <div class="KittyTransferModal">
+            <button class="KittyTransferModal-close"></button>
+            <img class="KittyTransferModal-image" src="../images/gift-kitty-lg.png">
+            <div class="Container Container--center">
+                <div class="Section">
+                    <div class="InputButtons-group">
+                        <label for="to">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">輸入或粘貼錢包地址：*</font>
+                            </font>
+                        </label>
+                        <input type="text" id="to" name="to" class="InputButtons InputButtons-input" placeholder="請輸入朋友的錢包地址" value="">
+                    </div>
+                </div>
+                <div class="Section">
+                    <button class="Button Button--icon Button--disabled" disabled>
+                        <span class="Button-icon">
+                            <i class="Icon Icon--gift"></i>
+                        </span>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">確定贈送</font>
+                        </font>
+                    </button>
+                </div>
+                <div class="Section">
+                    <div class="Note Note--warning">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">註意：為確保小狗能夠贈送順利，請確保您的朋友有壹個錢包地址！</font>
+                        </font>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="Modal payModal">
+    <div class="Modal-content">
+        <div class="KittyTransferModal">
+            <button class="KittyTransferModal-close"></button>
+            <!--<img class="KittyTransferModal-image" src="../images/gift-kitty-lg.png">-->
+            <div class="Container Container--center">
+                <div class="title">
+                    <div class="Section">
+                        <div class="myCountInfo">
+                            <span class="myCountName">我的賬戶</span>
+                            <div class="Addr"></div>
+                            <div class="myBalance"><em></em> ACT</div>
+                        </div>
+                    </div>
+                    <img src="../../images/icons/loading.svg" alt="">
+                    <div class="Section sellerCount">
+                        <!--<span class="salerCountName"></span>-->
+                        <div class="salerAddr Addr"></div>
+                    </div>
+                </div>
+
+                <div class="Section fee">
+                    <div class="priceDiv dogPriceDiv">
+                        <span>應付</span>
+                        <span class="dogPrice"></span> ACT
+                    </div>
+                    <div class="priceDiv GasPriceDiv">
+                        <span>Gas 費</span>
+                        <span class="gasPrice">0.04000</span> ACT
+                    </div>
+                    <div class="priceDiv totalPriceDiv">
+                        <span>總計</span>
+                        <span class="totalPrice"></span> ACT
+                    </div>
+                </div>
+
+                <div class="Container Container--center payPassword">
+                    <p class="InputButtons-group">
+                        <input type="password" class="InputButtons InputButtons-input passport" placeholder="請填寫交易密碼" maxlength="100">
+                    </p>
+                </div>
+
+                <div class="Section">
+                    <button class="Button Button--icon Button--disabled finalPay">
+                        <span class="Button-icon">
+                            <i class="Icon Icon--tag"></i>
+                        </span>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">確定支付</font>
+                        </font>
+                    </button>
+                    <!--<button class="Button Button&#45;&#45;icon recharge" target="_blank">-->
+                        <!--<span class="Button-icon">-->
+                            <!--<i class="Icon Icon&#45;&#45;heart"></i>-->
+                        <!--</span>-->
+                        <!--<font style="vertical-align: inherit;">-->
+                            <!--<font style="vertical-align: inherit;">充值</font>-->
+                        <!--</font>-->
+                    <!--</button>-->
+                </div>
+
+                <div class="Section tips">
+                    <div class="Note Note--warning">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">提示：妳的錢包余額不足以支付這筆交易，繼續操作請选择交易所进行充值 !</font>
+                        </font>
+                    </div>
+                </div>
+                <div class="Section chargeSiteSection">
+                    <div class="chargeSite">
+                        <ul>
+                            <li><a target="_blank" href="http://www.ourdax.com">Ourdax</a></li>
+                            <li><a target="_blank" href="http://www.okex.com">OkEX</a></li>
+                            <li><a target="_blank" href="http://www.kex.com">KEX</a></li>
+                            <li><a target="_blank" href="http://www.kucoin.com">Kucoin</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<main class="Main">
+    <div class="KittyPage my-kitty-detail">
+        <div class="KittyBanner u-bg-alt-strawberry">
+            <div class="Container Container--full">
+                <div class="KittyBanner-container">
+                    <a class="active" aria-current="true"></a>
+                    <div class="KittyBanner-status">
+                        <!-- react-empty: 2733 -->
+                    </div>
+                    <!--<div class="KittyBanner-share">-->
+                    <!--<img class="KittyBanner-shareBtn" src="../images/icons/share.svg" alt="分享我！"-->
+                    <!--role="button">-->
+                    <!--&lt;!&ndash; react-empty: 2736 &ndash;&gt;-->
+                    <!--</div>-->
+                </div>
+            </div>
+        </div>
+        <div class="KittyPage-content">
+            <div class="KittyProfile">
+                <div class="Container Container--sm">
+                    <div class="KittySection">
+                        <div class="KittySection-content">
+                            <div class="KittyHeader">
+                                <div class="KittyHeader-main">
+                                    <div class="KittyHeader-name">
+                                        <h1 class="KittyHeader-name-text KittyHeader-name-text--editable">
+                                            <em></em>
+                                        </h1>
+                                    </div>
+                                    <div class="KittyHeader-details">
+                                        <span class="dogid">
+                                            <em></em>
+                                        </span>
+                                        <span class="Separator">
+
+                                        </span>
+                                        <a class="KittyHeader-details-generation" aria-current="false">
+                                            <span>
+                                                <em></em>
+                                            </span>
+                                        </a>
+                                        <span class="Separator"></span>
+                                        <span class="KittyHeader-details-condition"></span>
+                                    </div>
+                                </div>
+                                <div class="KittyHeader-owner">
+                                    <a class="KittyHeader-owner-imageLink" aria-current="false">
+                                        <div class="KittyHeader-owner-image">
+                                            <img src="../images/icons/head.svg">
+                                        </div>
+                                    </a>
+                                    <span class="KittyHeader-owner-details">
+									<a class="KittyHeader-owner-name" aria-current="false">
+										<font style="vertical-align: inherit;">
+											<font style="vertical-align: inherit;">
+												我的小狗
+											</font>
+										</font>
+									</a>
+									<span>
+										<font style="vertical-align: inherit;">
+											<font style="vertical-align: inherit;">
+												主人
+											</font>
+										</font>
+									</span>
+								</span>
+                                </div>
+                                <div class="KittyHeader-actions">
+                                    <div class="KittyHeader-actions-action sireButton">
+                                        <a class="Button Button--icon" aria-current="false">
+                                            <span class="Button-icon">
+                                                <i class="Icon Icon--eggplant">
+                                                </i>
+                                            </span>
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">
+                                                    孕育小狗
+                                                </font>
+                                            </font>
+                                        </a>
+                                    </div>
+                                    <div class="KittyHeader-actions-action sellButton">
+                                        <a class="Button Button--icon" aria-current="false">
+                                            <span class="Button-icon">
+                                                <i class="Icon Icon--tag"></i>
+                                            </span>
+                                            <em>出售小狗</em>
+                                        </a>
+                                    </div>
+                                    <div class="KittyHeader-actions-action giftButton">
+                                        <button class="Button Button--icon">
+										<span class="Button-icon">
+											<i class="Icon Icon--gift"></i>
+										</span>
+                                            <em>贈送小狗</em>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="KittySection">
+                        <div class="KittySection-content">
+                            <!-- react-empty: 2783 -->
+                        </div>
+                    </div>
+                    <!--
+                    <div class="KittySection">
+                        <h2 class="KittySection-heading">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">
+                                    生物
+                                </font>
+                            </font>
+                        </h2>
+                        <div class="KittySection-content">
+                            <div class="KittyDescription">
+                                <p>
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">
+                                            喜雅！
+                                        </font>
+                                        <font style="vertical-align: inherit;">
+                                            我是超人。
+                                        </font>
+                                        <font style="vertical-align: inherit;">
+                                            在高中時，我被選為學校運動員。
+                                        </font>
+                                        <font style="vertical-align: inherit;">
+                                            我把醬油放在壹切東西上。
+                                        </font>
+                                        <font style="vertical-align: inherit;">
+                                            就像壹切：熱狗，烤寬面條 - 壹切！
+                                        </font>
+                                        <font style="vertical-align: inherit;">
+                                            我期待著和妳壹起旋轉生病的節拍。
+                                        </font>
+                                    </font>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+                    <!--
+                    <div class="KittySection">
+                        <h2 class="KittySection-heading">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">
+                                    屬性
+                                </font>
+                            </font>
+                        </h2>
+                        <div class="KittySection-content">
+                            <div class="Kitty-attributes">
+                                <div class="ListAttributes">
+                                    <a class="ListAttributes-item" aria-current="false" href="/marketplace/all?search=strawberry">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">
+                                                草莓
+                                            </font>
+                                        </font>
+                                    </a>
+                                    <a class="ListAttributes-item" aria-current="false" href="/marketplace/all?search=luckystripe">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">
+                                                luckystripe
+                                            </font>
+                                        </font>
+                                    </a>
+                                    <a class="ListAttributes-item" aria-current="false" href="/marketplace/all?search=crazy">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">
+                                                瘋狂的
+                                            </font>
+                                        </font>
+                                    </a>
+                                    <a class="ListAttributes-item" aria-current="false" href="/marketplace/all?search=salmon">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">
+                                                三文魚
+                                            </font>
+                                        </font>
+                                    </a>
+                                    <a class="ListAttributes-item" aria-current="false" href="/marketplace/all?search=skyblue">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">
+                                                skyblue
+                                            </font>
+                                        </font>
+                                    </a>
+                                    <a class="ListAttributes-item" aria-current="false" href="/marketplace/all?search=himalayan">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">
+                                                喜馬拉雅
+                                            </font>
+                                        </font>
+                                    </a>
+                                    <a class="ListAttributes-item" aria-current="false" href="/marketplace/all?search=emeraldgreen">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">
+                                                翡翠
+                                            </font>
+                                        </font>
+                                    </a>
+                                    <a class="ListAttributes-item" aria-current="false" href="/marketplace/all?search=saycheese">
+                                        <font style="vertical-align: inherit;">
+                                            <font style="vertical-align: inherit;">
+                                                綠saycheese
+                                            </font>
+                                        </font>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+                    <div class="KittySection geneDiv">
+                        <h2 class="KittySection-heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">基因</font>
+                            </font></h2>
+                        <div class="KittySection-content">
+                            <div class="Kitty-attributes">
+                                <div class="ListAttributes" id="ListAttributes"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--
+                    <div class="KittySection">
+                        <h2 class="KittySection-heading">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">
+                                    父母
+                                </font>
+                            </font>
+                        </h2>
+                        <div class="KittySection-content">
+                            <div class="Kitty-parents">
+                                <div class="KittiesList">
+                                    <div class="KittiesList-items">
+                                        <div class="KittiesList-item">
+                                            <a aria-current="false" href="/kitty/149030">
+                                                <div class="KittyCard-wrapper">
+                                                    <div class="KittyCard u-bg-alt-strawberry KittyCard--thumbnail">
+                                                        <img class="KittyCard-image" src="https://storage.googleapis.com/ck-kitty-image/0x06012c8cf97bead5deae237070f9587f8e7a266d/149030.svg" alt="小鷹＃149030  - 猩紅色|  曲棍球">
+                                                        <div class="KittyCard-status">
+                                                        </div>
+                                                    </div>
+                                                    <div class="KittyCard-details">
+                                                        <div class="KittyCard-subname">
+                                                            <font style="vertical-align: inherit;">
+                                                                <font style="vertical-align: inherit;">
+                                                                    基蒂149030·第四代
+                                                                </font>
+                                                            </font>
+                                                        </div>
+                                                        <div class="KittyCard-coldown">
+                                                            <font style="vertical-align: inherit;">
+                                                                <font style="vertical-align: inherit;">
+                                                                    快速
+                                                                </font>
+                                                            </font>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="KittiesList-item">
+                                            <a aria-current="false" href="/kitty/151291">
+                                                <div class="KittyCard-wrapper">
+                                                    <div class="KittyCard u-bg-alt-strawberry KittyCard--thumbnail">
+                                                        <img class="KittyCard-image" src="https://storage.googleapis.com/ck-kitty-image/0x06012c8cf97bead5deae237070f9587f8e7a266d/151291.svg" alt="凱蒂＃151291  - 血色|  Googly |  淡紫色">
+                                                        <div class="KittyCard-status">
+                                                            <div class="KittyStatus">
+                                                                <div class="KittyStatus-item">
+																<span class="KittyStatus-itemIcon">
+																	<i class="Icon Icon--timer">
+																	</i>
+																</span>
+                                                                    <span class="KittyStatus-itemText">
+																	<font style="vertical-align: inherit;">
+																		<font style="vertical-align: inherit;">
+																			休息
+																		</font>
+																		<span class="KittyStatus-note">
+																			<font style="vertical-align: inherit;">
+																				23小時
+																			</font>
+																		</span>
+																	</font>
+																	<span class="KittyStatus-note">
+																		<font style="vertical-align: inherit;">
+																		</font>
+																	</span>
+																</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="KittyCard-details">
+                                                        <div class="KittyCard-subname">
+                                                            <font style="vertical-align: inherit;">
+                                                                <font style="vertical-align: inherit;">
+                                                                    基蒂151291·第四代
+                                                                </font>
+                                                            </font>
+                                                        </div>
+                                                        <div class="KittyCard-coldown">
+                                                            <font style="vertical-align: inherit;">
+                                                                <font style="vertical-align: inherit;">
+                                                                    快速
+                                                                </font>
+                                                            </font>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+                    <div class="KittySection parentsDiv">
+                        <h2 class="KittySection-heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">父母</font>
+                            </font>
+                        </h2>
+                        <div class="KittySection-content">
+                            <div class="Kitty-parents">
+                                <div class="KittiesList">
+                                    <div class="KittiesList-items"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="KittySection dogChildren childrenDiv">
+                        <h2 class="KittySection-heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">子女</font></font></h2>
+                        <div class="KittySection-content">
+                            <div class="Kitty-chileren">
+                                <div class="KittiesList">
+                                    <div class="KittiesList-items" id="childrenList">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<footer class="Footer">
+    <div class="Container Container--lg">
+        <div class="Footer-primary">
+            <div class="Footer-nav Footer-nav--primary">
+                <ul class="Footer-nav-items">
+                    <li class="Footer-nav-item">
+                        <a class="Footer-nav-link Footer-nav-link--mykitties" aria-current="false" href="../html/my-dogs.html">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">我的小狗</font>
+                            </font>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Footer-nav Footer-nav--primary">
+                <ul class="Footer-nav-items">
+                    <li class="Footer-nav-item">
+                        <a class="Footer-nav-link Footer-nav-link--activity" aria-current="false" href="../html/activity.html">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">交易記錄</font>
+                            </font>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Footer-nav Footer-nav--primary">
+                <ul class="Footer-nav-items">
+                    <li class="Footer-nav-item">
+                        <a class="Footer-nav-link Footer-nav-link--marketplace" aria-current="false" href="../html/marketplace.html">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">市場</font>
+                            </font>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Footer-nav Footer-nav--primary">
+                <ul class="Footer-nav-items">
+                    <li class="Footer-nav-item">
+                        <a class="Footer-nav-link Footer-nav-link--faq" aria-current="false" href="../html/faq.html">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">常見問題解答</font>
+                            </font>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Footer-nav Footer-nav--primary">
+                <ul class="Footer-nav-items">
+                    <li class="Footer-nav-item">
+                        <a class="Footer-nav-link Footer-nav-link--help" aria-current="false" href="../html/faq.html">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">幫助支持</font>
+                            </font>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Footer-nav Footer-nav--primary">
+                <ul class="Footer-nav-items">
+                    <li class="Footer-nav-item">
+                        <a class="Footer-nav-link Footer-nav-link--help" aria-current="false" target="_blank" href="https://jq.qq.com/?_wv=1027&k=5xwZw4f">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">官方QQ群</font>
+                            </font>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Footer-nav Footer-nav--primary">
+                <ul class="Footer-nav-items">
+                    <li class="Footer-nav-item">
+                        <a class="Footer-nav-link Footer-nav-link--help" aria-current="false" href="mailto:support@acdog.hk">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">官方邮箱</font>
+                            </font>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--<div class="Footer-nav Footer-nav&#45;&#45;primary">-->
+                <!--<ul class="Footer-nav-items">-->
+                    <!--<li class="Footer-nav-item">-->
+                        <!--<a class="Footer-nav-link Footer-nav-link&#45;&#45;help" aria-current="false" href="http://47.52.198.203/en/acdog/html">-->
+                            <!--<font style="vertical-align: inherit;">-->
+                                <!--<font style="vertical-align: inherit;">EN/CN</font>-->
+                            <!--</font>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        </div>
+        <!--<div class="Footer-secondary">-->
+        <!--<a class="Footer-secondary-link" aria-current="false" href="../html/faq.html">-->
+        <!--<font style="vertical-align: inherit;">-->
+        <!--<font style="vertical-align: inherit;">使用條款</font>-->
+        <!--</font>-->
+        <!--</a>-->
+        <!--<a class="Footer-secondary-link" aria-current="false" href="../html/faq.html">-->
+        <!--<font style="vertical-align: inherit;">-->
+        <!--<font style="vertical-align: inherit;">隱私政策</font>-->
+        <!--</font>-->
+        <!--</a>-->
+        <!--</div>-->
+    </div>
+</footer>
+
+<!-- public -->
+<script src="../js/jquery-1.12.0.min.js"></script>
+<script src="../js/jquery.cookie.js"></script>
+
+<!-- plugin -->
+
+
+<!-- private -->
+<script src="../js/vendors.js"></script>
+
+<script src="../js/api.js"></script>
+
+<script src="../js/public.js"></script>
+
+<script src="../js/my-kitty-detail.js"></script>
+
+
+<!-- statistics -->
+<div class="website-statistics">
+    <script src="" language="JavaScript"></script>
+</div>
+
+</body>
+</html>

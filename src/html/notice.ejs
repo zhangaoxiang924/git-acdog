@@ -1,0 +1,24 @@
+<%- include('./include/header', {
+title: 'CryptoDogs',
+description: 'CryptoDogs',
+keywords: 'CryptoDogs',
+plugin: [],
+private: ['../css/public.css'],
+status: 'full',
+login: false,
+page: 'notice'
+}) %>
+
+<main class="Main notice">
+    <div class="Hero">
+        <div class="Container Container--sm Container--center">
+            <p id="content"></p>
+        </div>
+    </div>
+</main>
+
+<%- include('./include/footer', {
+plugin: [],
+private: ['../js/public.js', '../js/notice.js'],
+statistics: ''
+}) %>

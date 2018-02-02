@@ -1,0 +1,40 @@
+/**
+ * Author：zhoushuanglong
+ * Time：2017-12-09 18:20
+ * Description：Description
+ */
+
+.kitty-details {
+    .geneDiv,
+    .parentsDiv,
+    .childrenDiv {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    .KittyHeader-details-condition {
+        &:hover {
+            .Tooltip--arrowTop {
+                display: inline-block;
+            }
+        }
+
+        .Tooltip--arrowTop {
+            display: none;
+        }
+    }
+
+    .ListAttributes-item--color:before {
+        background-image: url(../images/icons/type-common.svg);
+    }
+
+    .parentsDiv,
+    .childrenDiv {
+        .KittyCard:before {
+            top: 68%;
+        }
+    }
+}

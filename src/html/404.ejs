@@ -1,0 +1,25 @@
+<%- include('./include/header', {
+title: 'CryptoDogs',
+description: 'CryptoDogs',
+keywords: 'CryptoDogs',
+plugin: [],
+private: ['../css/public.css'],
+status: 'half',
+login: false,
+page: 'mydogs'
+}) %>
+
+<main class="Main">
+    <div class="Hero">
+        <div class="Container Container--sm Container--center"><img class="Hero-image" src="../images/404.png" alt="">
+            <p class="Hero-description">You’ve got to be kitten me right now.</p>
+            <a class="Button Button--larger Button--love" aria-current="false" href="/marketplace">See someKitties</a>
+        </div>
+    </div>
+</main>
+
+<%- include('./include/footer', {
+plugin: [],
+private: ['../js/public.js'],
+statistics: ''
+}) %>

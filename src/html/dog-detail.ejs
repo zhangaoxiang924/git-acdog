@@ -1,0 +1,209 @@
+<%- include('./include/header', {
+title: 'CryptoDogs',
+description: 'CryptoDogs',
+keywords: 'CryptoDogs',
+plugin: [],
+private: ['../css/public.css', '../css/kitty-details.css'],
+status: 'full',
+login: true,
+page: 'marketplace'
+}) %>
+
+<%- include('./include/pay') %>
+
+<main class="Main">
+    <div class="KittyPage kitty-details">
+        <div class="KittyBanner u-bg-alt-mintgreen">
+            <div class="Container Container--full">
+                <div class="KittyBanner-container">
+                    <a class="active" aria-current="true">
+                        <img class="KittyBanner-image" src="" alt="">
+                    </a>
+                    <div class="KittyBanner-status">
+                        <div class="KittyStatus KittyStatus--list">
+                            <!--<div class="KittyStatus-item">-->
+                            <!--<span class="KittyStatus-itemIcon">-->
+                            <!--<i class="Icon Icon&#45;&#45;tag"></i>-->
+                            <!--</span>-->
+                            <!--<span class="KittyStatus-itemText">售價<span class="KittyStatus-note"><small>Ξ</small><em class="price-now">1.5264</em></span></span>-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                    <!--<div class="KittyBanner-share">
+                        <img class="KittyBanner-shareBtn" title="分享" src="/images/icons/share.svg" alt="分享我！" role="button">&lt;!&ndash; react-empty: 674 &ndash;&gt;
+                    </div>-->
+                </div>
+            </div>
+        </div>
+        <div class="KittyPage-content">
+            <div class="KittyProfile">
+                <div class="Container Container--sm">
+                    <div class="KittySection">
+                        <div class="KittySection-content">
+                            <div class="KittyHeader">
+                                <div class="KittyHeader-main">
+                                    <div class="KittyHeader-name">
+                                        <h1 class="KittyHeader-name-text">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;"><em id="dogId"></em></font>
+                                            </font></h1>
+                                    </div>
+                                    <div class="KittyHeader-details">
+                                        <!--<span>-->
+                                        <!--<font style="vertical-align: inherit;">-->
+                                        <!--<font style="vertical-align: inherit;">凱蒂270035</font>-->
+                                        <!--</font>-->
+                                        <!--</span>-->
+                                        <!--<span class="Separator"></span>-->
+                                        <a class="KittyHeader-details-generation" aria-current="false" href="../html/marketplace.html">
+                                            <span>
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;">第</font>
+                                                </font>
+                                                <font style="vertical-align: inherit;">
+                                                    <font style="vertical-align: inherit;" id="generation"> </font>
+                                                    <font style="vertical-align: inherit;">代</font>
+                                                </font>
+                                            </span>
+                                        </a>
+                                        <span class="Separator"></span>
+                                        <span class="KittyHeader-details-condition">
+                                            <!--<img src="../images/icons/info.svg" class="KittyHeader-details-conditionInfo">-->
+                                            <!--<div class="Tooltip Tooltip&#45;&#45;arrowTop">-->
+                                                <!--<h3>Cooldowns</h3>-->
+                                                <!--<p>壹只小貓和另壹只小貓交配後，它將暫時無法在短時間內繁殖。每次小貓繁殖的時候，恢復的時間都會增加。</p>-->
+                                                <!--<div class="KittyHeader-details-conditionsTable">-->
+                                                    <!--<div class="KittyHeader-details-conditionsRow">-->
+                                                        <!--<span>Fast</span><span>1m</span>-->
+                                                    <!--</div>-->
+                                                    <!--<div class="KittyHeader-details-conditionsRow">-->
+                                                        <!--<span>Swift:</span><span>2m - 5m</span>-->
+                                                    <!--</div>-->
+                                                    <!--<div class="KittyHeader-details-conditionsRow KittyHeader-details-conditionsRow&#45;&#45;selected">-->
+                                                        <!--<span>Snappy:</span><span>10m - 30m</span>-->
+                                                    <!--</div>-->
+                                                    <!--<div class="KittyHeader-details-conditionsRow">-->
+                                                        <!--<span>Brisk:</span><span>1h - 2h</span>-->
+                                                    <!--</div>-->
+                                                    <!--<div class="KittyHeader-details-conditionsRow">-->
+                                                        <!--<span>Plodding:</span><span>4h - 8h</span>-->
+                                                    <!--</div>-->
+                                                    <!--<div class="KittyHeader-details-conditionsRow">-->
+                                                        <!--<span>Slow:</span><span>16h - 24h</span>-->
+                                                    <!--</div>-->
+                                                    <!--<div class="KittyHeader-details-conditionsRow">-->
+                                                        <!--<span>Sluggish:</span><span>2d - 4d</span>-->
+                                                    <!--</div>-->
+                                                    <!--<div class="KittyHeader-details-conditionsRow">-->
+                                                        <!--<span>Catatonic:</span><span>1 week</span>-->
+                                                    <!--</div>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="KittyHeader-owner">
+                                    <a class="KittyHeader-owner-imageLink" aria-current="false">
+                                        <div class="KittyHeader-owner-image">
+                                            <img src="../images/icons/head.svg">
+                                        </div>
+                                    </a>
+                                    <span class="KittyHeader-owner-details">
+                                        <a class="KittyHeader-owner-name" aria-current="false">
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;" id="userName"></font>
+                                            </font>
+                                        </a>
+                                        <span>
+                                            <font style="vertical-align: inherit;">
+                                                <font style="vertical-align: inherit;">所有者</font>
+                                            </font>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="KittySection">
+                        <div class="KittySection-content">
+                            <div>
+                                <div class="KittyBid KittyBid--sale">
+                                    <div class="KittyBid-boxes">
+                                        <div class="KittyBid-box">
+                                            <h3 class="KittyBid-box-title">當前價格</h3>
+                                            <span class="KittyBid-box-subtitle"><em>Ξ</em><em class="price-now"></em></span>
+                                        </div>
+                                        <div class="KittyBid-box KittyBid-box--secondary">
+                                            <h3 class="KittyBid-box-title">剩余時間</h3>
+                                            <span class="KittyBid-box-subtitle" id="leftTime"></span>
+                                        </div>
+                                    </div>
+                                    <div class="KittyBid-action" id="actionButton">
+                                        <!--<a class="Button Button&#45;&#45;larger Button&#45;&#45;buy" aria-current="false" href="../html/buy.html">立即購買</a>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="KittyBid-auctionGraph">
+                        <div class="AuctionGraph AuctionGraph--sale">
+                            <div class="" id="svgChart"></div>
+                            <div class="AuctionGraph-prices">
+                                <div class="AuctionGraph-price startPrice">
+                                    開始售價
+                                    <span class="AuctionGraph-price-fee"><em>Ξ</em></span>
+                                </div>
+                                <div class="AuctionGraph-price endPrice">結束售價
+                                    <span class="AuctionGraph-price-fee"><em>Ξ</em></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="KittySection geneDiv">
+                        <h2 class="KittySection-heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">基因</font>
+                            </font></h2>
+                        <div class="KittySection-content">
+                            <div class="Kitty-attributes">
+                                <div class="ListAttributes" id="ListAttributes"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="KittySection dogParents parentsDiv">
+                        <h2 class="KittySection-heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">父母</font></font></h2>
+                        <div class="KittySection-content">
+                            <div class="Kitty-parents">
+                                <div class="KittiesList">
+                                    <div class="KittiesList-items">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="KittySection dogChildren childrenDiv">
+                        <h2 class="KittySection-heading"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">子女</font></font></h2>
+                        <div class="KittySection-content">
+                            <div class="Kitty-chileren">
+                                <div class="KittiesList">
+                                    <div class="KittiesList-items" id="childrenList">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<%- include('./include/footer', {
+plugin: [],
+private: ['../js/api.js', '../js/public.js', '../js/kitty-detail.js'],
+statistics: ''
+}) %>

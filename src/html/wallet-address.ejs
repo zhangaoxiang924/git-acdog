@@ -1,0 +1,75 @@
+<%- include('./include/header', {
+title: 'CryptoDogs',
+description: 'CryptoDogs',
+keywords: 'CryptoDogs',
+plugin: [],
+private: ['../css/public.css'],
+status: 'full',
+login: false,
+page: 'login'
+}) %>
+
+<main class="Main">
+    <div class="Hero wallet-address">
+        <div class="Container Container--sm Container--center">
+            <h2 class="Hero-h2">
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">錢包地址</font>
+                </font>
+            </h2>
+            <form>
+                <div class="Section">
+                    <img class="ProfileHeader-image ProfileHeader-image--clickable" src="../images/icons/head.svg">
+                </div>
+                <div class="Section">
+                    <p class="InputButtons-group">
+                        <label for="address">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">錢包地址</font>
+                            </font>
+                        </label>
+                        <input type="text" class="InputButtons InputButtons-input InputButtons--readonly wallet" style="pointer-events: auto" placeholder="錢包地址" maxlength="100" readonly>
+                    </p>
+                </div>
+                <!--<div class="Section pkSection">-->
+                    <!--<p class="InputButtons-group">-->
+                        <!--<label for="privateKey">-->
+                            <!--<font style="vertical-align: inherit;">-->
+                                <!--<font style="vertical-align: inherit;">私鑰</font>-->
+                            <!--</font>-->
+                        <!--</label>-->
+                        <!--<input type="text" class="InputButtons InputButtons-input InputButtons&#45;&#45;readonly privateKey" style="pointer-events: auto" placeholder="私鑰" maxlength="100" readonly>-->
+                    <!--</p>-->
+                <!--</div>-->
+                <div class="Section">
+                    <div class="Note Note--warning">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">錢包地址和私鑰用於您的轉帳或交易，可通過助記詞重新生成，請一定要妥善保管！</font>
+                        </font>
+                    </div>
+                    <div class="Note confirmDiv">
+                        <input type="checkbox" id="confirmButton" name="confirmButton" class="confirmButton" style="margin-right: 1rem">
+                        <label for="confirmButton">
+                            <font style="vertical-align: inherit;">
+                                <!--<font style="vertical-align: inherit;">我已確定記下助記詞、密碼、個人錢包地址和私鑰</font>-->
+                                <font style="vertical-align: inherit;">我已確定記下助記詞、密碼、個人錢包地址</font>
+                            </font>
+                        </label>
+                    </div>
+                    <a class="Button Button--love Button--larger toEmailName">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">下壹步</font>
+                        </font>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+
+
+<%- include('./include/footer', {
+plugin: [],
+private: ['../js/public.js', '../js/wallet-address.js'],
+statistics: ''
+}) %>

@@ -1,0 +1,74 @@
+/**
+ * Author：zhoushuanglong
+ * Time：2017-12-09 18:20
+ * Description：Description
+ */
+.Main {
+    .Hero {
+        display: none;
+
+        &.active {
+            display: block;
+            padding: 0;
+        }
+
+        #sign-in {
+            display: inline-block;
+            margin-top: 40px;
+            margin-left: 20px;
+            text-decoration: underline;
+        }
+
+        &.login-fill-auxiliary-word {
+            .InputButtons-group {
+                position: relative;
+
+                .markWords {
+                    background: #fff;
+                    border: 1px solid rgb(204, 204, 204);
+                    list-style: none;
+                    padding: 0;
+                    text-align: left;
+                    position: absolute;
+                    width: 100%;
+                    z-index: 1;
+                    bottom: 35px;
+                    display: none;
+
+                    &.active {
+                        display: block;
+                    }
+
+                    li {
+                        padding: 10px;
+                        color: #000;
+                        cursor: pointer;
+
+                        &:hover {
+                            background: #f9f8f6;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .nextStep {
+        margin: 0 1rem;
+    }
+
+    .loginMethod {
+        font-size: 1.2rem;
+        color: #555;
+        border-radius: 1rem;
+        border: 2px solid #f3f1ee;
+        padding: 0.3rem 1rem;
+        user-select: none;
+        cursor: pointer;
+        display: none;
+
+        &.active {
+            display: inline-flex;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+<div class="Modal extractCommitModal">
+    <div class="Modal-content">
+        <div class="KittyTransferModal">
+            <button class="KittyTransferModal-close"></button>
+            <div class="Container Container--center">
+                <div class="Section-modal">
+                    <div class="Note Note--warning">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">
+                                特殊情況下交易失敗，支付的ACT暫存此處
+                            </font>
+                        </font>
+                    </div>
+                </div>
+                <div class="Section-modal">
+                    <div class="InputButtons-group">
+                        <label for="to">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">合約中 ACT 數量：</font>
+                            </font>
+                        </label>
+                        <span class="commitBannceNum"></span>
+                    </div>
+                </div>
+
+                <div class="Section-modal">
+                    <div class="InputButtons-group">
+                        <label for="to">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">請輸入轉出到錢包的 ACT 數量：</font>
+                            </font>
+                        </label>
+                        <input type="number" step="0.00001" min="0" class="AuctionForm-value" value="0" id="extractCommitNum">
+                    </div>
+                </div>
+
+                <div class="Section-modal">
+                    <div class="InputButtons-group">
+                        <label for="">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">請輸入交易密碼：</font>
+                            </font>
+                        </label>
+                        <input type="password" class="InputButtons InputButtons-input passport" placeholder="請填寫交易密碼" maxlength="100">
+                    </div>
+                </div>
+
+                <div class="Section-modal">
+                    <button class="getCommitButton Button Button--icon Button--disabled" disabled>
+                            <span class="Button-icon">
+                                <i class="Icon Icon--tag"></i>
+                            </span>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">確定提取</font>
+                        </font>
+                    </button>
+                </div>
+                <div class="Section-modal">
+                    <div class="Note Note--warning">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">註意：提現可能會收取極少量的服務費！</font>
+                        </font>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="CryptoDogs">
+    <meta name="description" content="CryptoDogs">
+    <meta name="author" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="viewport"
+          content="
+          width=device-width,
+          initial-scale=1.0,
+          minimum-scale=1.0,
+          maximum-scale=1.0,
+          user-scalable=no"/>
+    <link rel='icon' href='../images/favicon.ico' type='image/x-ico'>
+    <title>CryptoDogs</title>
+
+    <!--[if lt IE 9]>
+    <script src="../js/browser-tips.js"></script>
+    <script src="../js/css3-mediaqueries.js"></script>
+    <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <!-- plugin -->
+    
+
+    <!-- private -->
+    
+    <link href="../css/public.css" rel="stylesheet">
+    
+    <link href="../css/myDogs.css" rel="stylesheet">
+    
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?8f2fb0c218a01c32228cb20319ecd9f0";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+<body>
+
+
+    <div class="Container Container--full">
+        
+        <div class="Header">
+            <a class="Header-home active" aria-current="true" href="../html/index.html">
+                <div class="Header-logoWrapper">
+                    <div class="Header-logo"></div>
+                </div>
+                <h1 class="Header-wordmark">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">CryptoDogs</font>
+                    </font>
+                </h1>
+            </a>
+
+            <nav class="Header-navigation hasLogin">
+                <span class="cut-line"></span>
+                <a class="Header-navigation-item Header-navigation-item--active"
+                   aria-current="true" href="../html/my-dogs.html">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">我的小狗</font>
+                    </font>
+                </a>
+                <span class="cut-line"></span>
+                <a class="Header-navigation-item  " aria-current="false" href="../html/marketplace.html">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">市場</font>
+                    </font>
+                </a>
+                <span class="cut-line"></span>
+                <!--<a class="Header-navigation-item" aria-current="false" href="/invite">
+                    <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">邀請</font></font>
+                </a>-->
+                <a class="Header-navigation-item Header-navigation-item--bell " aria-current="false" href="../html/activity.html">
+                    <img src="../images/icons/activity.svg">
+                </a>
+                <span class="cut-line"></span>
+                <a class="Header-navigation-item " aria-current="false" href="../html/notice.html">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">公告</font>
+                    </font>
+                </a>
+                <span class="cut-line"></span>
+            </nav>
+            <nav class="Header-navigation notLogin">
+                <span class="cut-line"></span>
+                <a class="Header-navigation-item " aria-current="true"
+                   href="../html/login.html">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">登陸</font>
+                    </font>
+                </a>
+                <span class="cut-line"></span>
+                <a class="Header-navigation-item " aria-current="true"
+                   href="../html/auxiliary-word.html">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">註冊</font>
+                    </font>
+                </a>
+                <span class="cut-line"></span>
+                <a class="Header-navigation-item " aria-current="false" href="../html/marketplace.html">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">市場</font>
+                    </font>
+                </a>
+                <span class="cut-line"></span>
+                <a class="Header-navigation-item " aria-current="false" href="../html/notice.html">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">公告</font>
+                    </font>
+                </a>
+                <span class="cut-line"></span>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<main class="Main">
+    <div class="Modal extractBalanceModal">
+    <div class="Modal-content">
+        <div class="KittyTransferModal">
+            <button class="KittyTransferModal-close"></button>
+            <div class="Container Container--center">
+                <div class="Section-modal">
+                    <div class="InputButtons-group">
+                        <label for="to">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">賬戶 ACT 數量：</font>
+                            </font>
+                        </label>
+                        <span class="balanceNum"></span>
+                    </div>
+                </div>
+                <div class="Section-modal">
+                    <div class="InputButtons-group">
+                        <label for="to">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">請輸入轉出 ACT 數量：</font>
+                            </font>
+                        </label>
+                        <input type="number" step="0.00001" min="0" class="AuctionForm-value" value="0" id="extractNum">
+                    </div>
+                </div>
+                <div class="Section-modal">
+                    <div class="InputButtons-group">
+                        <label for="to">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">輸入或粘貼錢包地址：</font>
+                            </font>
+                        </label>
+                        <input type="text" id="to" name="to" class="InputButtons InputButtons-input extractTo" placeholder="請輸入需要轉出的錢包地址" value="">
+                    </div>
+                </div>
+
+                <div class="Section-modal payPassword">
+                    <div class="InputButtons-group">
+                        <label for="">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">請填寫交易密碼：</font>
+                            </font>
+                        </label>
+                        <input type="password" class="InputButtons InputButtons-input passport" placeholder="請填寫交易密碼" maxlength="100">
+                    </div>
+                </div>
+                <div class="Section-modal">
+                    <button class="confirmButton Button Button--icon Button--disabled" disabled>
+                        <span class="Button-icon">
+                            <i class="Icon Icon--tag"></i>
+                        </span>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">確定提現</font>
+                        </font>
+                    </button>
+                </div>
+                <div class="Section-modal">
+                    <div class="Note Note--warning">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">註意：提現可能會收取極少量的服務費！</font>
+                        </font>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="Modal extractCommitModal">
+    <div class="Modal-content">
+        <div class="KittyTransferModal">
+            <button class="KittyTransferModal-close"></button>
+            <div class="Container Container--center">
+                <div class="Section-modal">
+                    <div class="Note Note--warning">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">
+                                特殊情況下交易失敗，支付的ACT暫存此處
+                            </font>
+                        </font>
+                    </div>
+                </div>
+                <div class="Section-modal">
+                    <div class="InputButtons-group">
+                        <label for="to">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">合約中 ACT 數量：</font>
+                            </font>
+                        </label>
+                        <span class="commitBannceNum"></span>
+                    </div>
+                </div>
+
+                <div class="Section-modal">
+                    <div class="InputButtons-group">
+                        <label for="to">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">請輸入轉出到錢包的 ACT 數量：</font>
+                            </font>
+                        </label>
+                        <input type="number" step="0.00001" min="0" class="AuctionForm-value" value="0" id="extractCommitNum">
+                    </div>
+                </div>
+
+                <div class="Section-modal">
+                    <div class="InputButtons-group">
+                        <label for="">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">請輸入交易密碼：</font>
+                            </font>
+                        </label>
+                        <input type="password" class="InputButtons InputButtons-input passport" placeholder="請填寫交易密碼" maxlength="100">
+                    </div>
+                </div>
+
+                <div class="Section-modal">
+                    <button class="getCommitButton Button Button--icon Button--disabled" disabled>
+                            <span class="Button-icon">
+                                <i class="Icon Icon--tag"></i>
+                            </span>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">確定提取</font>
+                        </font>
+                    </button>
+                </div>
+                <div class="Section-modal">
+                    <div class="Note Note--warning">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">註意：提現可能會收取極少量的服務費！</font>
+                        </font>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="Modal sugarModal">
+    <div class="Modal-content">
+        <div class="KittyTransferModal">
+            <button class="KittyTransferModal-close"></button>
+            <div class="Container Container--center">
+                <div class="Section-modal">
+                    <div class="InputButtons-group">
+                        <label for="sugarAddr">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">請輸入領取糖果的 ACT 地址：</font>
+                            </font>
+                        </label>
+                        <input type="text" id="sugarAddr" name="sugarAddr" class="InputButtons InputButtons-input sugarAddr" placeholder="請輸入 ACT 地址" value="">
+                    </div>
+                </div>
+
+                <div class="Section-modal">
+                    <div class="InputButtons-group">
+                        <label for="">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">請輸入交易密碼：</font>
+                            </font>
+                        </label>
+                        <input type="password" class="InputButtons InputButtons-input passport" placeholder="請填寫交易密碼" maxlength="100">
+                    </div>
+                </div>
+
+                <div class="Section-modal">
+                    <div class="Note Note--warning">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">註意：必須是 Achain 錢包、Kcash 錢包中的 ACT 地址，否則可能無法正常接收糖果！</font>
+                        </font>
+                    </div>
+                </div>
+                <div class="Section-modal">
+                    <button class="sugarConfirmButton Button Button--icon Button--disabled" disabled>
+                        <span class="Button-icon">
+                            <i class="Icon Icon--tag"></i>
+                        </span>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">確定提交</font>
+                        </font>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="Modal siteModal">
+        <div class="Modal-content">
+            <div class="KittyTransferModal">
+                <button class="KittyTransferModal-close"></button>
+                <div class="Container Container--center">
+                    <div class="Section">
+                        <div class="Note Note--warning">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">请选择交易所进行充值</font>
+                            </font>
+                        </div>
+                    </div>
+                    <div class="Section chargeSite">
+                        <ul>
+                            <li><a target="_blank" href="http://www.ourdax.com">Ourdax</a></li>
+                            <li><a target="_blank" href="http://www.okex.com">OkEX</a></li>
+                            <li><a target="_blank" href="http://www.kex.com">KEX</a></li>
+                            <li><a target="_blank" href="http://www.kucoin.com">Kucoin</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ProfilePage">
+        <div class="Container Container--lg">
+            <div class="ProfileHeader">
+                <div class="ProfileHeader-details">
+                    <img class="ProfileHeader-image" src="../images/icons/head.svg">
+                    <div class="ProfileHeader-info">
+                        <h1 class="ProfileHeader-title">
+                            <em></em>
+                        </h1>
+                        <div class="ProfileHeader-wallet">
+                            <a class="CopyAddress" href="./wallet-address.html">
+                                <span>
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">
+                                            地址
+                                        </font>
+                                    </font>
+                                </span>
+                            </a>
+                            <span class="logOutSpan">
+                                <span class="Separator"></span>
+                                <a class="ProfileHeader-settings" aria-current="false">
+                                    <em>註銷</em>
+                                </a>
+                            </span>
+                            <span class="site">
+                                <span class="Separator"></span>
+                                <a class="ProfileHeader-settings" aria-current="false">
+                                    <em>充值</em>
+                                </a>
+                            </span>
+                            <span class="getMoney">
+                                <span class="Separator"></span>
+                                <a class="ProfileHeader-settings" aria-current="false">
+                                    <em>提現</em>
+                                </a>
+                                <ul class="tips">
+                                    <li class="toAccount">提取合約余額</li>
+                                    <li class="toCash">提出賬戶余額</li>
+                                </ul>
+                            </span>
+                            <span class="sugar">
+                                <span class="Separator"></span>
+                                <a class="ProfileHeader-settings" aria-current="false">
+                                    <em>登记地址</em>
+                                </a>
+                            </span>
+                            <!--<span>-->
+                            <!--<span class="Separator"></span>-->
+                            <!--<a class="ProfileHeader-settings" aria-current="false" href="./email-name.html">-->
+                            <!--<font style="vertical-align: inherit;">-->
+                            <!--<font style="vertical-align: inherit;">-->
+                            <!--設置-->
+                            <!--</font>-->
+                            <!--</font>-->
+                            <!--</a>-->
+                            <!--</span>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ProfileFilterBar">
+            <div class="Filter Filter--purple">
+                <div class="Filter-container">
+                    <!--
+                    <div class="Filter-selectors">
+                        <select class="Filter-select" placeholder="Sorting order">
+                            <option value=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">年齡最小</font></font></option>
+                            <option value="old-first"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">生成最早</font></font></option>
+                            <option value="cheap"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">最便宜</font></font></option>
+                            <option value="expensive"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">最昂貴</font></font></option>
+                        </select>
+                    </div>
+                    <div class="Filter-sortBy">
+                        <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">排序方式</font></font>
+                    </div>
+                    -->
+                    <div class="Filter-tabs">
+                        <span class="Filter-tab Filter-tab--active">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">所有的狗</font>
+                            </font>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="nodogDiv">
+
+        </div>
+
+        <div class="Loader"><span class="Loader-img"></span></div>
+
+        <div class="ProfileKitties">
+            <div class="KittiesGallery">
+                <div class="Container Container--lg">
+                    <div class="KittiesGrid" id="kittiesGrid">
+
+                    </div>
+                </div>
+            </div>
+            <div class="KittiesGalleryPagination" id="pagination"></div>
+        </div>
+    </div>
+</main>
+
+
+<footer class="Footer">
+    <div class="Container Container--lg">
+        <div class="Footer-primary">
+            <div class="Footer-nav Footer-nav--primary">
+                <ul class="Footer-nav-items">
+                    <li class="Footer-nav-item">
+                        <a class="Footer-nav-link Footer-nav-link--mykitties" aria-current="false" href="../html/my-dogs.html">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">我的小狗</font>
+                            </font>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Footer-nav Footer-nav--primary">
+                <ul class="Footer-nav-items">
+                    <li class="Footer-nav-item">
+                        <a class="Footer-nav-link Footer-nav-link--activity" aria-current="false" href="../html/activity.html">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">交易記錄</font>
+                            </font>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Footer-nav Footer-nav--primary">
+                <ul class="Footer-nav-items">
+                    <li class="Footer-nav-item">
+                        <a class="Footer-nav-link Footer-nav-link--marketplace" aria-current="false" href="../html/marketplace.html">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">市場</font>
+                            </font>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Footer-nav Footer-nav--primary">
+                <ul class="Footer-nav-items">
+                    <li class="Footer-nav-item">
+                        <a class="Footer-nav-link Footer-nav-link--faq" aria-current="false" href="../html/faq.html">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">常見問題解答</font>
+                            </font>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Footer-nav Footer-nav--primary">
+                <ul class="Footer-nav-items">
+                    <li class="Footer-nav-item">
+                        <a class="Footer-nav-link Footer-nav-link--help" aria-current="false" href="../html/faq.html">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">幫助支持</font>
+                            </font>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Footer-nav Footer-nav--primary">
+                <ul class="Footer-nav-items">
+                    <li class="Footer-nav-item">
+                        <a class="Footer-nav-link Footer-nav-link--help" aria-current="false" target="_blank" href="https://jq.qq.com/?_wv=1027&k=5xwZw4f">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">官方QQ群</font>
+                            </font>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Footer-nav Footer-nav--primary">
+                <ul class="Footer-nav-items">
+                    <li class="Footer-nav-item">
+                        <a class="Footer-nav-link Footer-nav-link--help" aria-current="false" href="mailto:support@acdog.hk">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">官方邮箱</font>
+                            </font>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--<div class="Footer-nav Footer-nav&#45;&#45;primary">-->
+                <!--<ul class="Footer-nav-items">-->
+                    <!--<li class="Footer-nav-item">-->
+                        <!--<a class="Footer-nav-link Footer-nav-link&#45;&#45;help" aria-current="false" href="http://47.52.198.203/en/acdog/html">-->
+                            <!--<font style="vertical-align: inherit;">-->
+                                <!--<font style="vertical-align: inherit;">EN/CN</font>-->
+                            <!--</font>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        </div>
+        <!--<div class="Footer-secondary">-->
+        <!--<a class="Footer-secondary-link" aria-current="false" href="../html/faq.html">-->
+        <!--<font style="vertical-align: inherit;">-->
+        <!--<font style="vertical-align: inherit;">使用條款</font>-->
+        <!--</font>-->
+        <!--</a>-->
+        <!--<a class="Footer-secondary-link" aria-current="false" href="../html/faq.html">-->
+        <!--<font style="vertical-align: inherit;">-->
+        <!--<font style="vertical-align: inherit;">隱私政策</font>-->
+        <!--</font>-->
+        <!--</a>-->
+        <!--</div>-->
+    </div>
+</footer>
+
+<!-- public -->
+<script src="../js/jquery-1.12.0.min.js"></script>
+<script src="../js/jquery.cookie.js"></script>
+
+<!-- plugin -->
+
+
+<!-- private -->
+<script src="../js/vendors.js"></script>
+
+<script src="../js/api.js"></script>
+
+<script src="../js/public.js"></script>
+
+<script src="../js/myKitties.js"></script>
+
+
+<!-- statistics -->
+<div class="website-statistics">
+    <script src="" language="JavaScript"></script>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<%- include('./include/header', {
+title: 'CryptoDogs',
+description: 'CryptoDogs',
+keywords: 'CryptoDogs',
+plugin: [],
+private: ['../css/public.css'],
+status: 'full',
+login: true,
+page: 'marketplace'
+}) %>
+
+<main class="Main">
+    <div class="BrowsePage marketplace" style="margin-top: 80px">
+        <!--<div class="BrowseSearchBar">
+            <div class="Container Container&#45;&#45;lg Container&#45;&#45;spread">
+                <div class="InputButtons InputButtons&#45;&#45;searchSmall">
+                    <input type="text" class="InputButtons-input" placeholder="Search Dogs..." value="" maxlength="60">
+                    <div class="InputButtons-buttons">
+                        <button class="InputButtons-button InputButtons-button&#45;&#45;primary">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">搜索</font>
+                            </font>
+                        </button>
+                        <button class="InputButtons-button InputButtons-button&#45;&#45;dismiss">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">確定</font>
+                            </font>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <div class="BrowseFilterBar">
+            <div class="Filter">
+                <div class="Filter-container">
+                    <div class="Filter-selectors">
+                        <select class="Filter-select" placeholder="Sorting order">
+                            <option value="5">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">新上架</font>
+                                </font>
+                            </option>
+                            <option value="1">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">最低價</font>
+                                </font>
+                            </option>
+                            <option value="2">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">最高價</font>
+                                </font>
+                            </option>
+                            <option value="3">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">最年輕</font>
+                                </font>
+                            </option>
+                            <option value="4">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">最年長</font>
+                                </font>
+                            </option>
+                        </select>
+                    </div>
+                    <div class="Filter-sortBy">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">排序方式</font>
+                        </font>
+                    </div>
+                    <div class="Filter-tabs">
+                        <span class="Filter-tab salingDog Filter-tab--active">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">出售</font>
+                            </font>
+                        </span>
+                        <span class="Filter-tab siringDog">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">生育</font>
+                            </font>
+                        </span>
+                        <span class="Filter-tab zeroDog">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">0代</font>
+                            </font>
+                        </span>
+                        <span class="Filter-tab allDog">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">所有</font>
+                            </font>
+                        </span>
+                        <!--<span class="Filter-tab gmdog">-->
+                            <!--<font style="vertical-align: inherit;">-->
+                                <!--<font style="vertical-align: inherit;">GM</font>-->
+                            <!--</font>-->
+                        <!--</span>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="KittiesGallery">
+            <div class="Container Container--lg">
+                <div class="Loader"><span class="Loader-img"></span></div>
+                <div class="KittiesGrid">
+                </div>
+            </div>
+        </div>
+        <div class="KittiesGalleryPagination" id="pagination"></div>
+    </div>
+</main>
+
+<%- include('./include/footer', {
+plugin: [],
+private: ['../js/public.js', '../js/marketplace.js'],
+statistics: ''
+}) %>

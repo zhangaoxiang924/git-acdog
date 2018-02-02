@@ -1,0 +1,110 @@
+<%- include('./include/header', {
+title: 'CryptoDogs',
+description: 'CryptoDogs',
+keywords: 'CryptoDogs',
+plugin: [],
+private: ['../css/public.css', '../css/kitty-sire.css'],
+status: 'full',
+login: true,
+page: 'marketplace'
+}) %>
+
+<%- include('./include/pay') %>
+
+<main class="Main kitty-sire">
+    <div class="dogSelectModal Modal Modal--fill">
+        <div class="Modal-content">
+            <div class="KittySelectModal">
+                <button class="KittySelectModal-close"></button>
+                <div class="Container Container--full">
+                    <div class="KittySelectModal-header">
+                        <h4 class="KittySelectModal-title">選壹只小狗做親代</h4>
+                        <p class="KittySelectModal-subtitle">
+                            註意，小狗在市場掛單、生育或出生中時不能繁衍下一代，並且親子或兄弟姐妹間也無法生育，所以他們不在下面的列表中。
+                        </p>
+                    </div>
+                    <div class="KittySelectModal-grid"></div>
+                </div>
+                <!--<div class="KittiesGalleryPagination" id="pagination" style="margin-left: 0;"></div>-->
+            </div>
+        </div>
+    </div>
+
+    <div class="Hero">
+        <div class="Transaction">
+            <h1 class="Transaction-title">這兩只可愛的狗狗很快就會成為父母了!</h1>
+            <div class="Transaction-flow">
+                <span class="Transaction-item Transaction-item--from">妳</span>
+                <svg width="32" height="1" viewbox="0 0 32 1" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M.98.5h30.07" stroke="#DCDBD9" fill="none" fill-rule="evenodd" stroke-linecap="square"></path></svg>
+                <span class="Transaction-item Transaction-item--transfer">Ξ <em></em></span>
+                <svg width="29" height="13" viewbox="0 0 29 13" xmlns="http://www.w3.org/2000/svg">
+                    <g stroke="#DCDBD9" fill="none" fill-rule="evenodd">
+                        <path d="M.5 6.5h28" stroke-linecap="square"></path>
+                        <path d="M23 1l5.75 5.47L23 11.6"></path>
+                    </g>
+                </svg>
+                <span class="Transaction-item Transaction-item--to"></span>
+            </div>
+        </div>
+        <div class="Container Container--sm">
+            <div class="SexyTime">
+                <!--<div class="SexyTime-names">-->
+                <!--<div class="SexyTime-name SexyTime-name&#45;&#45;matron">-->
+                <!--<strong>妳的小狗</strong> 將會生出壹個蛋-->
+                <!--</div>-->
+                <!--<div class="SexyTime-name SexyTime-name&#45;&#45;sire">-->
+                <!--<strong></strong> 將會成為配種-->
+                <!--</div>-->
+                <!--</div>-->
+                <div class="SexyTime-cards">
+                    <div class="SexyTime-card SexyTime-card--matron SexyTime-card--empty">
+                        <button class="Button Button--large Button--love selectMyDog">選擇妳的狗</button>
+                    </div>
+                    <div class="SexyTime-card SexyTime-card--sire">
+                        <div class="KittyCard-wrapper">
+                            <div class="KittyCard u-bg-alt-bubblegum KittyCard--responsive buyDogImage">
+                                <img class="KittyCard-image" src="" alt="">
+                                <div class="KittyCard-status">
+                                    <div class="KittyStatus">
+                                        <div class="KittyStatus-item">
+                                            <span class="KittyStatus-itemIcon">
+                                                <i class="Icon Icon--eggplant"></i>
+                                            </span>
+                                            <span class="KittyStatus-itemText">
+                                                配對價格
+                                                <span class="KittyStatus-note"><small>Ξ </small><em></em></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="KittyCard-details">
+                                <div class="KittyCard-subname">
+                                    <em></em>
+                                </div>
+                                <div class="KittyCard-coldown">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Container Container--sm Container--center">
+            <div class="Section">
+                <p class="Hero-description">
+                    選擇妳的壹只小狗作為親代
+                </p>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<%- include('./include/footer', {
+plugin: [],
+private: ['../js/api.js', '../js/public.js', '../js/kitty-sire.js'],
+statistics: ''
+}) %>

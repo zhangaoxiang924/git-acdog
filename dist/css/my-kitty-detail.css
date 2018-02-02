@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/**
+ * Author：zhoushuanglong
+ * Time：2017-12-09 18:20
+ * Description：Description
+ */
+@media (max-width: 760px) {
+  .giftModal .Modal-content {
+    width: 90%; } }
+
+.my-kitty-detail {
+  position: relative; }
+  .my-kitty-detail .geneDiv,
+  .my-kitty-detail .parentsDiv,
+  .my-kitty-detail .childrenDiv {
+    display: none; }
+    .my-kitty-detail .geneDiv.active,
+    .my-kitty-detail .parentsDiv.active,
+    .my-kitty-detail .childrenDiv.active {
+      display: block; }
+
+/*# sourceMappingURL=my-kitty-detail.css.map */
+
+/*# sourceMappingURL=my-kitty-detail.css.map */
